@@ -83,7 +83,7 @@ article{
     margin-top:100px;
     padding-top: 80px;
     background:linear-gradient(rgb(31, 31, 31),rgb(153, 153, 153));
-    width: 80%;
+    width: 80% !important;
     margin-left: 10%;
     margin-right: 10%;
     padding:30px;
@@ -124,4 +124,7 @@ div#botonderegreso a{
 }
 div#botonderegreso a:hover{
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 1);
+}
+main{
+    /*width:80%;*/
 }
