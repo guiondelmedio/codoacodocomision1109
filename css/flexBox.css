@@ -1,0 +1,12 @@
+#justify{
+    display: flex;
+   /* justify-content: center;para centrar los hijos*/
+ /* justify-content: flex-end;para posicionar al final*/
+/* justify-content: flex-start; el que viene por defecto */
+/* justify-content:*/
+}
+.primer{
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+}
