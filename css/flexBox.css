@@ -1,12 +1,43 @@
 #justify{
-    display: flex;
-   /* justify-content: center;para centrar los hijos*/
- /* justify-content: flex-end;para posicionar al final*/
-/* justify-content: flex-start; el que viene por defecto */
-/* justify-content:*/
+    display: flex; /* uno al lado del otro, horizontal */
+    /* justify-content: center;se puede ordenar de varias maneras*/
+    /* justify-content: flex-end;       para posicionar al final*/
+    /* justify-content: flex-start;     para posicionar al principio */
+    /* justify-content:space-around;    espaciado */
+    /* justify-content:space-between;   espaciado solo entre elementos*/
+    /* justify-content:space-evenly;    espaciado uniforme*/
+
 }
-.primer{
-    width: 150px;
-    height: 150px;
-    background-color: blueviolet;
+.usandoFloat{
+/*  width: 150px;
+    height: 150px; */
+    background-color: rgb(252, 9, 9);
+    border-color: rgb(49, 46, 0);
+    border-width: 2px;
+    border-style: solid;
+    float: left;
+} 
+.usandoFlexbox{
+        width: 150px;
+        height: 150px;
+        background-color: blueviolet;
+        border-color: burlywood;
+        border-width: 2px;
+        border-style: solid;
+    } 
+.usandoFlexbox::after{
+    content:'Esto aparece después del contenido. Ejemplo de :after';
+    color:rgb(15, 0, 99);
+    font-size:10px;
+}
+.usandoFlexbox::before{
+    content:'Esto aparece antes del contenido.Ejemplo de :before';
+    color:rgb(255, 242, 4);
+    font-size:10px;
+}
+.usandoFlexbox::first-letter{
+    content:'Esto aparece antes del contenido.Ejemplo de :before';
+    color:rgb(0, 255, 0);
+    font-size:19px;
+    font-weight: bold;
 }
