@@ -18,13 +18,13 @@
     float: left;
 } 
 .usandoFlexbox{
-        width: 150px;
-        height: 150px;
-        background-color: blueviolet;
-        border-color: burlywood;
-        border-width: 2px;
-        border-style: solid;
-    } 
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    border-color: burlywood;
+    border-width: 2px;
+    border-style: solid;
+} 
 .usandoFlexbox:after{
     content:'Esto aparece después del contenido. Ejemplo de :after';
     color:rgb(15, 0, 99);
