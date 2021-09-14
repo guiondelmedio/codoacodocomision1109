@@ -1,0 +1,68 @@
+/* ver https://animate.style/ */ 
+
+body{
+    background-color: bisque;
+}
+
+i{
+    width:250px;
+    color:rgb(222, 55, 255);
+}
+
+@keyframes mover {
+    from { top:50px; color:chocolate}
+    to{top:250px; color:crimson}
+}
+#astronauta{
+    position:absolute;
+    left:200px;
+  /*  animation-name:mover;
+    animation-duration:5s; */
+
+    animation: mover 5s infinite reverse;
+
+   /* animation: name duration timing-function delay iteration-count direction fill-mode;
+*/
+    }
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to{opacity: 1; }
+}
+#satelite{
+     animation-name:fadeIn,otra,fadeIn;
+     animation-duration:15s,5s,2s;
+     animation-delay:5s,7s,3s;
+}
+@keyframes otra {
+    0%{color:darkblue;}
+    25%{color:darkkhaki;}
+    50%{color:red;}
+}
+
+ul li {
+    display: inline;
+    padding: 10px;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+
+}
+ul li:hover{
+animation-name: menu;
+animation-duration:1s;
+animation-iteration-count:infinite;
+}
+@keyframes menu {
+    0%{
+        padding:10px;
+        background-color: blue;
+        color:red;
+    }
+    100%{
+        padding:20px;
+        background-color: yellow;
+        color:black;  
+        border-radius:30px;
+        font-size:20px;
+    }
+}
