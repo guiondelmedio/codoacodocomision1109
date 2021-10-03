@@ -3,16 +3,17 @@
 body{
     background-color: bisque;
 }
-
+/* formato de los iconos*/
 i{
     width:250px;
     color:rgb(222, 55, 255);
 }
-
+/* primero se crea la animación y luego se asigna */
 @keyframes mover {
-    from { top:50px; color:chocolate}
-    to{top:250px; color:crimson}
+    from { top:50px; color:chocolate}   /*inicio:   ubicacion y color*/
+    to{top:250px; color:crimson}        /*fin:      ubicacion y color*/
 }
+/* formateo individualizado de icono */
 #astronauta{
     position:absolute;
     left:200px;
@@ -24,15 +25,20 @@ i{
    /* animation: name duration timing-function delay iteration-count direction fill-mode;
 */
     }
+  /*se crea la animación y luego se asigna */  
 @keyframes fadeIn {
     from { opacity: 0;}
     to{opacity: 1; }
 }
+
+/* formateo individualizado de icono */
 #satelite{
      animation-name:fadeIn,otra,fadeIn;
      animation-duration:15s,5s,2s;
      animation-delay:5s,7s,3s;
 }
+
+/*  se crea la animación y luego se asigna */
 @keyframes otra {
     0%{color:darkblue;}
     25%{color:darkkhaki;}
@@ -45,13 +51,14 @@ ul li {
     background-color: black;
     color:white;
     cursor:pointer;
-
 }
 ul li:hover{
 animation-name: menu;
 animation-duration:1s;
 animation-iteration-count:infinite;
 }
+/* animación de crecimiento */
+
 @keyframes menu {
     0%{
         padding:10px;

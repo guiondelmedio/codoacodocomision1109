@@ -1,0 +1,22 @@
+#principal{
+    display:flex;
+    justify-content: center;
+}
+
+.rojo{
+    background-color: red;
+    width:25%;
+    height: 300px;
+    color:yellow;
+    font-size:15px;
+    margin: 5px;
+}
+
+#negro{
+    background-color: black;
+    width:25%;
+    height: 300px;
+    color:white;
+    font-size:30px; 
+    
+}
