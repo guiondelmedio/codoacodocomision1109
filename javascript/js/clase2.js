@@ -9,7 +9,9 @@ console.log((numero+25)+" "+nombre)/*+ concatenar y sumar*/
 console.log(hayClases)
 console.log(5 > 8)
 let esFeriado=false;
-/*Condicionales*/
+
+/*CONDICIONALES*/
+
 if(8 >= 8){/*si es verdadera se ejecuta*/
     console.log("es correcto!")
 }else{/*se es falso*/
@@ -17,26 +19,43 @@ if(8 >= 8){/*si es verdadera se ejecuta*/
 }
 
 console.log((5 > 3) ? "Es correcto 5 > 3": "No es correcto");/*Ternario*/
+
 if((hayClases == true) && esFeriado != true){/*para que sea true se tienen que cumplir ambas condiciones*/
     console.log('Me conecto a la videollamada!')
 }else{
     console.log('No me conecto a la videollamada!')
 }
+
 if(25 < 32 || 12 > 20){/*se cumple una de las dos condiciones*/
     console.log('Se cumplió la condición')
 }
+
+
+
 let saludo = "Hola, cómo estás? "
-let saludar = saludo + nombre;
+let saludar = saludo + nombre; /*se concatenan dos variables String*/
 
-let elemento = document.getElementById("principal");
-// console.log(elemento)
-elemento.innerHTML="<h1 class='text-center bg-info'>"+ saludar + "</h1>";
-document.write("<div class='container'><div class='row' id='principal'><h1 class='text-center bg-info'>"+ saludar + "</h1></div></div>");
 
+/*Interacción de Javascript con HTML*/
+let elemento = document.getElementById("principal"); /*se crea una variable a la que se le asigna el objeto identificado con su ID*/
+
+elemento.innerHTML="<h1 class='text-center bg-info'>"+ saludar + "</h1>"; /* Metodo 1 para ingresar html en un contenedor, en este caso, gracias al ID */
+
+
+document.write("<div class='container'><div class='row' id='principal'><h1 class='text-center bg-info'>"+ saludar + "</h1></div></div>"); /*Metodo 2 */
+/*alrededor de la variable se puede construir una estructura html */
+
+
+/*Metodo 3 */
+/*Templates literales altGr+}  */
 document.write(`
     <div class="container"><div class="row" id="principal">
     <h1 class='text-center bg-info'> ${saludar}</h1></div></div>"
 `);
+
+
+let mensaje = prompt ("Escribe aqui el texto que vas a insertar en la pagina");
+elemento.innerHTML=mensaje;
 
 
 //let mensaje = prompt("Menú \n 1. Papas fritas \n 2. Milanesa con fritas \n 3. Milanesa Napolitana con fritas");
@@ -66,6 +85,10 @@ switch (mensaje) {
         elemento.innerHTML="No es una opción el valor tipeado!"
         let mensaje = prompt("Menú \n 1. Papas fritas \n 2. Milanesa con fritas \n 3. Milanesa Napolitana con fritas");  
 }
+*/
+
+/*Conversión para su uso */
+/* 
 let num = parseInt(prompt("Ingresa el primer número"));
 let num2 = parseInt(prompt("Ingresa el segundo número"));
 let resultado = "<p>El resultado de: " + num + " y " + num2 +" es: " + (num +num2)+ "</p>";

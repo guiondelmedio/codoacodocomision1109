@@ -1,8 +1,18 @@
 
-let elemento = document.getElementById("principal");/*Capturamos el div deo DOM */
+let elemento = document.getElementById("principal");/*Tomamos control del div a partir de su ID */
+
+
+let btn=document.getElementById("btn"); /*Tomamos control del boton */
+document.addEventListener('click',ejemplo) /*Agregamos funcion al click*/
+
+
+function ejemplo(){ /*y asi es la funcion*/
+    alert('Estamos llamando a la funcion cuando haces click')
+  };
+
 
 /*Usamos el evento load renderizamos el formulario */
-window.addEventListener('load',function(){
+window.addEventListener('load',function(){ /*Agregamos funcion al cargar*/
     elemento.innerHTML=`
     <form action="#">
     <div class="mb-3">
@@ -23,12 +33,15 @@ window.addEventListener('load',function(){
     `;
 });
 
-/*let btn = document.getElementById("btn");capturamos el botón */
+/*array */
 let usuarios=["Luis","Fede",40];
+/*objeto */
 let usuario = {
+   /*tiene propiedades */
     name:"Luis Navas",
     email:'luis.navas@bue.edu.ar',
     pass:'123456',
+    /*tiene metodos */
     validar:(e,p)=>{
         if(e === usuario.email && p === usuario.pass){
             return true;
@@ -37,18 +50,19 @@ let usuario = {
         }
     }    
 };
+/* funcion  que se ejecuta al tocar el boton del formulario */
 function entrar(){
     //e.preventDefault();
 
-    let email = document.getElementById("exampleInputEmail1").value; 
-    let pass = document.getElementById("exampleInputPassword1").value;
+    let email = document.getElementById("exampleInputEmail1").value; /* capturar la info ingresada*/
+    let pass = document.getElementById("exampleInputPassword1").value; /* capturar la info ingresada*/
     
-    let entra = usuario.validar(email,pass);
+    let entra = usuario.validar(email,pass); /* el contenido de esta variable es boolean, resultado del metodo de verificar*/
     if(entra){
         elemento.innerHTML=`
             <h1>Administración</h1>
             <p>Bienvenid@ ${usuario.name}</p>
-        `;
+        `; /* imprimir en el div id=principal*/
     }
     
 }
