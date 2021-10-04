@@ -1,0 +1,27 @@
+
+.cyan{
+    color:white;
+    background-color:rgb(52, 175, 175);
+}
+
+.grisOscuro{
+    background-color: rgb(63, 65, 66);
+}
+
+img{
+    width: 100%;
+}
+.nav-link {
+    color:grey;
+}
+.nav-pills .nav-link.active{
+    background-color: rgb(63, 65, 66);
+}
+
+#logoTexto{
+ 
+}
+#ticketVerde{
+    color:green;
+}
+
