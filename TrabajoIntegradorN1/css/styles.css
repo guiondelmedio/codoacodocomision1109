@@ -5,7 +5,7 @@
 }
 
 .grisOscuro{
-    background-color: rgb(63, 65, 66);
+    background-color: #353A40;
 }
 
 img{
@@ -15,7 +15,7 @@ img{
     color:grey;
 }
 .nav-pills .nav-link.active{
-    background-color: rgb(63, 65, 66);
+    background-color: #353A40;
 }
 
 #logoTexto{
@@ -24,4 +24,18 @@ img{
 #ticketVerde{
     color:green;
 }
+#colorBoton{
+    background-color: #96C93E;
+    border-color:#96C93E;
+}
+#colorFooter{
+    background-color:#1D3947;
+}
+.container-fluid{
+    padding-right:0px;
+    padding-left:0px;
+}
 
+#imagenHonolulu{
+    padding-right:0px;
+}
