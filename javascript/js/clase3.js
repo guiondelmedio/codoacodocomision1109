@@ -38,7 +38,7 @@
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝ ╚════╝  ╚═════╝     ╚═════╝ ╚══════╝    ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝    
 
 
-
+ 
 ██╗███╗   ██╗ ██████╗ ██████╗ ███████╗███████╗ █████╗ ██████╗  █████╗     ██████╗  ██████╗ ██████╗     ███╗   ██╗ █████╗ ██╗   ██╗███████╗ ██████╗  █████╗ ██████╗  ██████╗ ██████╗     
 ██║████╗  ██║██╔════╝ ██╔══██╗██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗    ██╔══██╗██╔═══██╗██╔══██╗    ████╗  ██║██╔══██╗██║   ██║██╔════╝██╔════╝ ██╔══██╗██╔══██╗██╔═══██╗██╔══██╗    
 ██║██╔██╗ ██║██║  ███╗██████╔╝█████╗  ███████╗███████║██║  ██║███████║    ██████╔╝██║   ██║██████╔╝    ██╔██╗ ██║███████║██║   ██║█████╗  ██║  ███╗███████║██║  ██║██║   ██║██████╔╝    
@@ -76,19 +76,19 @@ let btn = document.getElementById("btn");
 /*agrego Y le agrego un evento: EJECUTAR UNA FUNCION al hacer click */
 btn.addEventListener('click',sumar);
 
-
+/*CALLBACK: función que llama a otra función */
 
 
 function sumar(){
     /*declaro e inicializo 3 variables locales ingresadas por ventanita con boton */
     let num = Number(prompt("Ingresa tu primer número!"));
     let num2 = Number(prompt("Ingresa tu segundo número!"));
-    let op = prompt("Escribí la operacion a  realizar \n + para sumar\n - para restar\n * para multiplicar \n / para dividir")
+    let operacion = prompt("Escribí la operacion a  realizar \n + para sumar\n - para restar\n * para multiplicar \n / para dividir")
 
     /*declaro e inicializo variable locales para almacenar el resultado de la operacion seleccionada y para que la siguiente estructura de control pueda usarla. */
     let resultado=0;
-    switch (op) {
-
+    switch (operacion) {
+ 
         case "+": /*elección */
             resultado = num + num2; /*operacion */
             miDiv.innerHTML +="<p> El resultado de la suma de "+num +" y "+num2+ " es: " + resultado + "</p>"; /*impresion en el html */
