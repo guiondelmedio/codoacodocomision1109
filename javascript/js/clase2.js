@@ -154,7 +154,7 @@ document.write(`
 
 let mensaje = prompt("Escribe aqui el texto que vas a insertar en la pagina");
 
-elemento.innerHTML = mensaje;
+elemento.innerHTML = "<h2 class='text-center text-danger'>"+mensaje+"</h2>"; 
 
 /*OTRO EJEMPLO - MENU DE COMIDAS RAPIDAS*/
 
