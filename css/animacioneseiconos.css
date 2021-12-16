@@ -3,47 +3,139 @@
 body{
     background-color: bisque;
 }
+
+
+
+
+
+/*
+
+
+      ██       ██  ██████  ██████  ███    ██  ██████  ███████       ██       
+       ██      ██ ██      ██    ██ ████   ██ ██    ██ ██           ██        
+█████   ██     ██ ██      ██    ██ ██ ██  ██ ██    ██ ███████     ██   █████ 
+       ██      ██ ██      ██    ██ ██  ██ ██ ██    ██      ██      ██        
+      ██       ██  ██████  ██████  ██   ████  ██████  ███████       ██       
+                                                                             
+                                                                             
+*/
+
+
 /* formato de los iconos*/
 i{
     width:250px;
-    color:rgb(222, 55, 255);
+    color:white;
 }
-/* primero se crea la animación y luego se asigna */
-@keyframes mover {
-    from { top:50px; color:chocolate}   /*inicio:   ubicacion y color*/
-    to{top:250px; color:crimson}        /*fin:      ubicacion y color*/
+
+
+/*
+
+
+██████  ███████ ███████ ██ ███    ██ ██ ██████       █████  ███    ██ ██ ███    ███  █████   ██████ ██  ██████  ███    ██ 
+██   ██ ██      ██      ██ ████   ██ ██ ██   ██     ██   ██ ████   ██ ██ ████  ████ ██   ██ ██      ██ ██    ██ ████   ██ 
+██   ██ █████   █████   ██ ██ ██  ██ ██ ██████      ███████ ██ ██  ██ ██ ██ ████ ██ ███████ ██      ██ ██    ██ ██ ██  ██ 
+██   ██ ██      ██      ██ ██  ██ ██ ██ ██   ██     ██   ██ ██  ██ ██ ██ ██  ██  ██ ██   ██ ██      ██ ██    ██ ██  ██ ██ 
+██████  ███████ ██      ██ ██   ████ ██ ██   ██     ██   ██ ██   ████ ██ ██      ██ ██   ██  ██████ ██  ██████  ██   ████ 
+                                                                                                                                                                                                                                            
+
+*/
+
+@keyframes subir {
+    from { top:50px; color:red}   /*INICIO:   ubicacion y color*/
+    to{top:250px; color:white}        /*FIN:      ubicacion y color*/
 }
+
+
+/*
+
+
+███████ ███████      █████  ███████ ██  ██████  ███    ██  █████  
+██      ██          ██   ██ ██      ██ ██       ████   ██ ██   ██ 
+███████ █████       ███████ ███████ ██ ██   ███ ██ ██  ██ ███████ 
+     ██ ██          ██   ██      ██ ██ ██    ██ ██  ██ ██ ██   ██ 
+███████ ███████     ██   ██ ███████ ██  ██████  ██   ████ ██   ██ 
+                                                                  
+                                                                  
+*/
+
+
 /* formateo individualizado de icono */
 #astronauta{
     position:absolute;
     left:200px;
-  /*  animation-name:mover;
-    animation-duration:5s; */
 
-    animation: mover 5s infinite reverse;
-
-   /* animation: name duration timing-function delay iteration-count direction fill-mode;
-*/
+    /*SE ASIGNA ANIMACIÓN*/ 
+        /*animation-name:mover;
+        animation-duration:5s;
+        */
+    /*SE ASIGNA ANIMACIÓN*/ 
+    animation: subir 5s infinite reverse;
+   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     }
-  /*se crea la animación y luego se asigna */  
-@keyframes fadeIn {
+ 
+
+/*
+
+
+██████  ███████ ███████ ██ ███    ██ ██ ██████       █████  ███    ██ ██ ███    ███  █████   ██████ ██  ██████  ███    ██ 
+██   ██ ██      ██      ██ ████   ██ ██ ██   ██     ██   ██ ████   ██ ██ ████  ████ ██   ██ ██      ██ ██    ██ ████   ██ 
+██   ██ █████   █████   ██ ██ ██  ██ ██ ██████      ███████ ██ ██  ██ ██ ██ ████ ██ ███████ ██      ██ ██    ██ ██ ██  ██ 
+██   ██ ██      ██      ██ ██  ██ ██ ██ ██   ██     ██   ██ ██  ██ ██ ██ ██  ██  ██ ██   ██ ██      ██ ██    ██ ██  ██ ██ 
+██████  ███████ ██      ██ ██   ████ ██ ██   ██     ██   ██ ██   ████ ██ ██      ██ ██   ██  ██████ ██  ██████  ██   ████ 
+                                                                                                                                                                                                                                            
+
+*/
+
+
+/* primero se crea la animación y luego se asigna */
+@keyframes aparecer {
     from { opacity: 0;}
     to{opacity: 1; }
 }
 
-/* formateo individualizado de icono */
-#satelite{
-     animation-name:fadeIn,otra,fadeIn;
-     animation-duration:15s,5s,2s;
-     animation-delay:5s,7s,3s;
+
+/* primero se crea la animación y luego se asigna */
+@keyframes cambiodecolor {
+    0%{color:black;}
+    25%{color:red;}
+    50%{color:greenyellow;}
 }
 
-/*  se crea la animación y luego se asigna */
-@keyframes otra {
-    0%{color:darkblue;}
-    25%{color:darkkhaki;}
-    50%{color:red;}
+
+/*
+
+
+███████ ███████      █████  ███████ ██  ██████  ███    ██  █████  
+██      ██          ██   ██ ██      ██ ██       ████   ██ ██   ██ 
+███████ █████       ███████ ███████ ██ ██   ███ ██ ██  ██ ███████ 
+     ██ ██          ██   ██      ██ ██ ██    ██ ██  ██ ██ ██   ██ 
+███████ ███████     ██   ██ ███████ ██  ██████  ██   ████ ██   ██ 
+                                                                  
+                                                                  
+*/
+
+
+/* formateo individualizado de icono */
+#satelite{
+    /*SE ASIGNA ANIMACIÓN*/ 
+     animation-name:cambiodecolor,aparecer;
+     animation-duration:5s,2s;
+     animation-delay:7s,3s;
 }
+
+
+/*
+
+
+      ██       ███    ███ ███████ ███    ██ ██    ██       ██       
+       ██      ████  ████ ██      ████   ██ ██    ██      ██        
+█████   ██     ██ ████ ██ █████   ██ ██  ██ ██    ██     ██   █████ 
+       ██      ██  ██  ██ ██      ██  ██ ██ ██    ██      ██        
+      ██       ██      ██ ███████ ██   ████  ██████        ██       
+                                                                    
+ 
+*/
+
 
 ul li {
     display: inline;
@@ -52,13 +144,21 @@ ul li {
     color:white;
     cursor:pointer;
 }
-ul li:hover{
-animation-name: menu;
-animation-duration:1s;
-animation-iteration-count:infinite;
-}
-/* animación de crecimiento */
 
+/*
+
+
+██████  ███████ ███████ ██ ███    ██ ██ ██████       █████  ███    ██ ██ ███    ███  █████   ██████ ██  ██████  ███    ██ 
+██   ██ ██      ██      ██ ████   ██ ██ ██   ██     ██   ██ ████   ██ ██ ████  ████ ██   ██ ██      ██ ██    ██ ████   ██ 
+██   ██ █████   █████   ██ ██ ██  ██ ██ ██████      ███████ ██ ██  ██ ██ ██ ████ ██ ███████ ██      ██ ██    ██ ██ ██  ██ 
+██   ██ ██      ██      ██ ██  ██ ██ ██ ██   ██     ██   ██ ██  ██ ██ ██ ██  ██  ██ ██   ██ ██      ██ ██    ██ ██  ██ ██ 
+██████  ███████ ██      ██ ██   ████ ██ ██   ██     ██   ██ ██   ████ ██ ██      ██ ██   ██  ██████ ██  ██████  ██   ████ 
+                                                                                                                                                                                                                                            
+
+*/
+
+/* animación de crecimiento */
+/* primero se crea la animación y luego se asigna */
 @keyframes menu {
     0%{
         padding:10px;
@@ -72,4 +172,23 @@ animation-iteration-count:infinite;
         border-radius:30px;
         font-size:20px;
     }
+}
+
+/*
+
+
+███████ ███████      █████  ███████ ██  ██████  ███    ██  █████  
+██      ██          ██   ██ ██      ██ ██       ████   ██ ██   ██ 
+███████ █████       ███████ ███████ ██ ██   ███ ██ ██  ██ ███████ 
+     ██ ██          ██   ██      ██ ██ ██    ██ ██  ██ ██ ██   ██ 
+███████ ███████     ██   ██ ███████ ██  ██████  ██   ████ ██   ██ 
+                                                                  
+                                                                  
+*/
+
+/*SE ASIGNA ANIMACIÓN*/ 
+ul li:hover{
+animation-name: menu;
+animation-duration:1s;
+animation-iteration-count:infinite;
 }

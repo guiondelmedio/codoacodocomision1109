@@ -1,69 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-   
+
+    <!-- CDN BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/javascript.css">
 
 </head>
+
 <body>
+
     <h1 class="text-center">Javascript</h1>
- <!--  <button class="btn btn-primary" id="btn" onclick="inicio()"></button> --> <!--comentado para no usarse en la clase 4-->
-    
+    <!-- <button class="btn btn-primary" id="btn" onclick="inicio()"></button> -->
+    <!--comentado para no usarse en la clase 4-->
+
+
+    <!--para usar bootstrap, su contenedor -->
     <div class="container">
         <div class="row" id="principal">
-
 
         </div>
     </div>
 
-<!--inicio Javascript embebido-->
 
-   <!-- <script src="./js/clase1.js">
-  //    alert("ventana emergente");
-  //    console.log("Texto de consola");
-      /*Variables */
- //     let nombre="Mariano Devia"; /*string o cadena de caracteres */
-  //    var numero=18; /*numérico */
-  //    const PI=3.1416; /*numérico constante */
-  //    let hayClases=true; /*boolerano */
-  //    console.log((numero+25)+" "+nombre); /* concatenar y sumar */
-  //    console.log(hayClases);
-  //    let esFeriado=false;
-      /* condicionales*/
-      /* si...sino */
 
- //     if (5>3){
-  //          console.log("5 es mayor a 3");
-   //   } else {
-    //        console.log("5 no es mayor a 3");
-   //   } 
 
-  //    console.log((5>3)? "5 es mayor a 3":"5 no es mayor a 3"); /*Ternario*/
 
-  //    if ((hayClases == true) && esFeriado != true ){
-  //        console.log("Me conecto a la videollamada")
- //     }else{
-  //        console.log("no me conecto a la videollamada")
-  //    }
-      
-  //    if ( 25 < 32 || 12 > 20) { /*se cumple solo una condicióm*/
-   //       console.log("Se cumplió la condición")
-  //    }
 
-   //   let saludo = "Hola, como estás?"
-  //    let saludar = saludo +" "+ nombre;
-  //    conole.log(saludar);
-    </script>
 
-fin Javascript embebido-->
 
-<script src="./js/clase5.js"></script>
+<!-- 
 
+      ██            ██ ███████     ███████ ███    ███ ██████  ███████ ██████  ██ ██████   ██████        ██       
+       ██           ██ ██          ██      ████  ████ ██   ██ ██      ██   ██ ██ ██   ██ ██    ██      ██        
+█████   ██          ██ ███████     █████   ██ ████ ██ ██████  █████   ██████  ██ ██   ██ ██    ██     ██   █████ 
+       ██      ██   ██      ██     ██      ██  ██  ██ ██   ██ ██      ██   ██ ██ ██   ██ ██    ██      ██        
+      ██        █████  ███████     ███████ ██      ██ ██████  ███████ ██████  ██ ██████   ██████        ██       
+                                                                                                                 
+      Abrimos una etiqueta script como contenedor de nuestro código JS
+      Se dice que es mejor ubicarla antes de cerrar la etiqueta body                                                                                                                                                          
+ 
+  --> 
+  
+
+
+
+
+<!-- 
+ 
+ <script src="./js/clase1.js">
+
+
+    alert("ventana emergente");
+
+     console.log("Texto de consola");
+
+-->
+
+
+
+
+<!--
+/*
+██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
+██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
+██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████ 
+ ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
+  ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
+                                                                    
+ -->                                                                   
+<!--
+
+ let nombre="Juan Pérez"; /*string o cadena de caracteres */
+
+ var numero=18; /*numérico */
+
+ const PI=3.1416; /*numérico constante */
+
+ let hayClases=true; /*boolerano */
+
+ console.log((numero+25)+" "+nombre); /* concatenar y sumar */
+
+ console.log(hayClases);
+ 
+ let esFeriado=false;
+
+-->  
+
+
+<!--
+/* MANEJO DE TEXTO */
+
+ let saludo = "Hola, como estás?"
+ let saludar = saludo +" "+ nombre;
+ console.log(saludar);
+ 
+ </script>
+
+-->
+
+
+
+
+
+<!--
+/*
+███████ ███████ ████████ ██████         ██████  ███████      ██████  ██████  ███    ██ ████████ ██████   ██████  ██      
+██      ██         ██    ██   ██        ██   ██ ██          ██      ██    ██ ████   ██    ██    ██   ██ ██    ██ ██      
+█████   ███████    ██    ██████         ██   ██ █████       ██      ██    ██ ██ ██  ██    ██    ██████  ██    ██ ██      
+██           ██    ██    ██   ██        ██   ██ ██          ██      ██    ██ ██  ██ ██    ██    ██   ██ ██    ██ ██      
+███████ ███████    ██    ██   ██ ██     ██████  ███████      ██████  ██████  ██   ████    ██    ██   ██  ██████  ███████                                                                                                                          
+ */
+ -->  
+
+<!--
+
+
+
+
+ /* IF-ELSE */
+
+ if (5>3)
+ console.log("5 es mayor a 3");
+ } else {
+ console.log("5 no es mayor a 3");
+ } 
+
+ console.log((5>3)? "5 es mayor a 3":"5 no es mayor a 3"); /*Ternario*/
+
+ if ((hayClases == true) && esFeriado != true ){
+ console.log("Me conecto a la videollamada")
+ }else{
+ console.log("no me conecto a la videollamada")
+ }
+ 
+
+
+
+ */ IF /*
+
+ if ( 25 < 32 || 12 > 20) { /*se cumple solo una condicióm*/
+ console.log("Se cumplió la condición")
+ }
+
+--> 
+
+
+<!--Fin  del Javascript embebido-->
+
+
+<script src="./js/clase1.js"></script>
+<!--se inserta abajo porque es necesario leer todos los elementos para capturarlos -->
 </body>
+
 </html>

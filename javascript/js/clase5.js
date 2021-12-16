@@ -1,25 +1,53 @@
+
+/*
+
+
+██╗███╗   ██╗████████╗███████╗██████╗  █████╗  ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗                                              
+██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝██║██╔═══██╗████╗  ██║                                              
+██║██╔██╗ ██║   ██║   █████╗  ██████╔╝███████║██║     ██║     ██║██║   ██║██╔██╗ ██║                                              
+██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██╔══██║██║     ██║     ██║██║   ██║██║╚██╗██║                                              
+██║██║ ╚████║   ██║   ███████╗██║  ██║██║  ██║╚██████╗╚██████╗██║╚██████╔╝██║ ╚████║                                              
+╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝          
+
+                                                                                                                                  
+██╗  ██╗████████╗███╗   ███╗██╗         ██╗   ██╗         ██╗ █████╗ ██╗   ██╗ █████╗ ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
+██║  ██║╚══██╔══╝████╗ ████║██║         ╚██╗ ██╔╝         ██║██╔══██╗██║   ██║██╔══██╗██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
+███████║   ██║   ██╔████╔██║██║          ╚████╔╝          ██║███████║██║   ██║███████║███████╗██║     ██████╔╝██║██████╔╝   ██║   
+██╔══██║   ██║   ██║╚██╔╝██║██║           ╚██╔╝      ██   ██║██╔══██║╚██╗ ██╔╝██╔══██║╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   
+██║  ██║   ██║   ██║ ╚═╝ ██║███████╗       ██║       ╚█████╔╝██║  ██║ ╚████╔╝ ██║  ██║███████║╚██████╗██║  ██║██║██║        ██║   
+╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝╚══════╝       ╚═╝        ╚════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   
+                                                                                                                                  
+
+*/
+
+
+
+
+
+/* se define la variable elemento contiene al contenedor del documento cuyo ID sea "principal" */
 let elemento = document.querySelector("#principal");
-/* se crea una variable que contiene el elemento html determinado por el id*/
 
 
 
 
-/**ARREGLOS -----------------------------------------------------------------------------------------*/
-let mascotas = []; /*Arreglo vacio */
-/*asignando valores posisciones/índices*/
+
+
+/**EJEMPLO DE USO DE ARRAYS --------*/
+let mascotas = []; /* defino un array vacio */
+
+
+/*asignando valores posiciones/índices*/
 // mascotas[0]= "Loro"; 
-// mascotas[0]="Loro grande"
 // mascotas[1] = "Perro";
 
-
-
-//Funcion push -> agrega un elemento al final del array si no sabes qué cantidad hay.
+//LA FUNCION PUSH -> agrega un elemento al final del array, por si no sabes qué cantidad hay.
 //mascotas.push("Gallo");
 
 
-
 //comillas francesas AltGr+} = `
-//¿Cómo imprimir la variable array dentro de un elemento html?
+
+
+//¿Cómo imprimir un array JS dentro de un documento HTML?
 //elemento.innerHTML = `<p>${mascotas}</p>`;
 //elemento.innerHTML = `<p>${mascotas[1]}</p>`;
 
@@ -27,7 +55,7 @@ let mascotas = []; /*Arreglo vacio */
 //elemento.innerHTML = `<p> Hay ${mascotas.length} mascotas </p>`;
 
 
-//¿Cómo recorrer el arreglo, elemento por elemento?
+//¿Cómo recorrer el array, imprimiendo la información de cada posición?
 /*
 for (let a = 0; a < mascotas.length; a++) {
   elemento.innerHTML += `<p>la mascota nro ` + a + ` es ${mascotas[a]}</p>`;
@@ -39,13 +67,64 @@ for (let a = 0; a < mascotas.length; a++) {
 
 
 
-// funcion flecha para AGREGAR MASCOTA-------------al array de mascotas--------------------------------------------------------------------------------
+
+/*
+
+
+███████╗██╗ ██████╗██╗  ██╗ █████╗     ██╗   ██╗                                         
+██╔════╝██║██╔════╝██║  ██║██╔══██╗    ╚██╗ ██╔╝                                         
+█████╗  ██║██║     ███████║███████║     ╚████╔╝                                          
+██╔══╝  ██║██║     ██╔══██║██╔══██║      ╚██╔╝                                           
+██║     ██║╚██████╗██║  ██║██║  ██║       ██║                                            
+╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝       ╚═╝ 
+                                          
+
+███████╗ ██████╗ ██████╗ ███╗   ███╗██╗   ██╗██╗      █████╗ ██████╗ ██╗ ██████╗         
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║██║   ██║██║     ██╔══██╗██╔══██╗██║██╔═══██╗        
+█████╗  ██║   ██║██████╔╝██╔████╔██║██║   ██║██║     ███████║██████╔╝██║██║   ██║        
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██║   ██║██║     ██╔══██║██╔══██╗██║██║   ██║        
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║██║  ██║██║╚██████╔╝        
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝  
+
+
+██████╗ ███████╗    ███╗   ███╗ █████╗ ███████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗
+██╔══██╗██╔════╝    ████╗ ████║██╔══██╗██╔════╝██╔════╝██╔═══██╗╚══██╔══╝██╔══██╗██╔════╝
+██║  ██║█████╗      ██╔████╔██║███████║███████╗██║     ██║   ██║   ██║   ███████║███████╗
+██║  ██║██╔══╝      ██║╚██╔╝██║██╔══██║╚════██║██║     ██║   ██║   ██║   ██╔══██║╚════██║
+██████╔╝███████╗    ██║ ╚═╝ ██║██║  ██║███████║╚██████╗╚██████╔╝   ██║   ██║  ██║███████║
+╚═════╝ ╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝
+                                                                                         
+
+
+*/
+
+
+
+
+
+/*
+
+█████   ██████  ██████  ███████  ██████   █████  ██████  
+██   ██ ██       ██   ██ ██      ██       ██   ██ ██   ██ 
+███████ ██   ███ ██████  █████   ██   ███ ███████ ██████  
+██   ██ ██    ██ ██   ██ ██      ██    ██ ██   ██ ██   ██ 
+██   ██  ██████  ██   ██ ███████  ██████  ██   ██ ██   ██ 
+                                                          
+                                                          
+*/
+
+
+
+
+
+
+// FUNCION FLECHA para AGREGAR CADA MASCOTA-------------al array de objetos de mascotas !--------------------------------------------------------------------------------
 const agregarMascota = () => {
 
+  // definimos una varibale que capture todo del elemento que contenga un input, como el de un formulario
   let datos = document.querySelectorAll("input");
-  // asignamos una varibale que capture los elementos input de un formulario
 
-  //creo variable "consulta" vacía, para levantar la info de los radios de formulario "urgencia" o "consulta"
+  //creo variable local "consulta" vacía, para levantar la info de los radios del formulario "urgencia" o "consulta"
   let consulta = "";
 
   if (datos[6].checked) {
@@ -56,8 +135,8 @@ const agregarMascota = () => {
   console.log(consulta);
 
 
-  //CLASE {propietario,especie,raza,edad,tamaño,imagen,tipoConsulta}
-  //vamos a guardar los valores de cada posición de input guardado en la variable array datos. 
+  //Vamos a definir una variable que la información de la cada mascota{propietario,especie,raza,edad,tamaño,imagen,tipoConsulta}
+  //A cada valor de cada posición de input guardado en la variable array datos. 
   let mascota = {
     propietario: datos[0].value,
     especie: datos[1].value,
@@ -70,23 +149,58 @@ const agregarMascota = () => {
 
   /*esto es lo último, agregar el objeto mascota al final del arreglo de objetos */
   mascotas.push(mascota);
+
   mostrarMascotas();
 };
 
-// funcion para  CAMBIAR DATOS MASCOTA----------------------------------------------------------------------------------------------------
-//------------------------------------
 
+
+
+
+
+/*
+
+
+
+ ██████  █████  ███    ███ ██████  ██  █████  ██████  
+██      ██   ██ ████  ████ ██   ██ ██ ██   ██ ██   ██ 
+██      ███████ ██ ████ ██ ██████  ██ ███████ ██████  
+██      ██   ██ ██  ██  ██ ██   ██ ██ ██   ██ ██   ██ 
+ ██████ ██   ██ ██      ██ ██████  ██ ██   ██ ██   ██ 
+                                                      
+                                                      
+
+
+*/
+
+
+
+
+
+
+// FUNCION FLECHA para  CAMBIAR DATOS de una MASCOTA----------------------------------------------------------------------------------------------------
+//------------------------------------
+// a esta funcion se le pasa un parametro
 const cambiarDatos = (c) => {
+
+  // definimos una varibale que capture todo del elemento que contenga un input, como el de un formulario
   let datos = document.querySelectorAll("input");
 
+  /* creamos una variable local para almacenar el resultado de una futura operacion */
   let consulta = "";
+
+
+  /*pasamos el valor booleano de los radios a un texto equivalente */
   if (datos[6].checked) {
     consulta = "urgencia";
   } else {
     consulta = "consulta"
   }
+
+  /*salida de consola de navegador */
   console.log(consulta);
 
+  /*agreamos el dato al objeto */
   let mascota = {
     propietario: datos[0].value,
     especie: datos[1].value,
@@ -96,22 +210,45 @@ const cambiarDatos = (c) => {
     src: datos[5].value,
     consulta: consulta
   };
+
   mascotas[c] = mascota;
+
   mostrarMascotas();
 
 };
 
 
 
-// funcion para  MODIFICAR DATOS MASCOTA---------que se usa cuando se muestra la mascota (¿se modifica esta o se agrega una nueva?)---------------------------------------------------------------------------------------
-//--------------------------------------
+/*
 
-const modificarM = (b) => {
+
+███    ███  ██████  ██████  ██ ███████ ██  ██████  █████  ██████  
+████  ████ ██    ██ ██   ██ ██ ██      ██ ██      ██   ██ ██   ██ 
+██ ████ ██ ██    ██ ██   ██ ██ █████   ██ ██      ███████ ██████  
+██  ██  ██ ██    ██ ██   ██ ██ ██      ██ ██      ██   ██ ██   ██ 
+██      ██  ██████  ██████  ██ ██      ██  ██████ ██   ██ ██   ██ 
+                                                                  
+                                                                  
+
+*/
+
+
+
+
+
+/* FUNCION FLECHA para  MODIFICAR DATOS de un objeto MASCOTA */
+//que se usa cuando se muestra la mascota (¿se modifica esta o se agrega una nueva?)
+
 // a esta funcion se le pasa un parametro
+const modificarM = (b) => {
+
+// se crea una variable local que almacena el valor de la posicion indicada del array mascotas
   let mascota = mascotas[b];
-// se crea una variable que almacena el valor de la posicion indicada 
-  let consulta = "";
+
 // variable vacia
+  let consulta = "";
+
+//vamos a mostrar el formulario, imprimiendo en este los valores ingresados de la mascota en cuestion
   if (mascota.consulta == "consulta") {
     consulta = `
     <div class="mb-3 form-check">
@@ -136,10 +273,8 @@ const modificarM = (b) => {
     </div>`
   }
 
-
-
-  
   console.log(consulta)
+
   elemento.innerHTML = `
   <form>
 
@@ -175,37 +310,59 @@ const modificarM = (b) => {
 
   ${consulta}
 
-  <button type="button" onclick="cambiarDatos(${b})" class="btn btn-primary" id="btn">Modificar</button>
+  <button type="button" onclick="cambiarDatos(${b})" class="btn btn-primary" id="btn">MODIFICAR DATOS</button>
 
 </form>
   `;
 }; 
 
 
+/*
 
-// funcion flecha para MOSTRAR MASCOTA ----------------------------------------------------------------------------------------------------
 
-// funcion flecha. Vamos a crear una funcion que, cuando se ejecute, imprima en html todas los objetos mascotas con sus propiedades.
-//agregamos bootstrap
+███    ███  ██████  ███████ ████████ ██████   █████  ██████  
+████  ████ ██    ██ ██         ██    ██   ██ ██   ██ ██   ██ 
+██ ████ ██ ██    ██ ███████    ██    ██████  ███████ ██████  
+██  ██  ██ ██    ██      ██    ██    ██   ██ ██   ██ ██   ██ 
+██      ██  ██████  ███████    ██    ██   ██ ██   ██ ██   ██ 
+                                                             
+                                                             
+
+ */
+
+
+
+
+/* FUNCION FLECHA para MOSTRAR MASCOTA */
+
+// Vamos a crear una funcion que, cuando se ejecute, imprima en HTML todOs los objetos mascotas con sus propiedades.
+// Ademas, agregamos agregamos bootstrap en los atributos de cada contenedor HTML
+
 const mostrarMascotas = () => {
 
-  elemento.innerHTML = "";
-/*antes de ejecutar el "for" que va a imprimir todas las mascotas, limpiamos el código. */
+  /*antes de ejecutar el "for" que va a imprimir todas las mascotas, limpiamos el código. */
 
+  elemento.innerHTML = "";
+
+  /*recorremos el array de objetos mascotas, imprimiendo en HTML cada mascota en forma de CARD de BOOTSTRAP */
   for (let a = 0; a < mascotas.length; a++) {
     elemento.innerHTML += `
         <div class="card mr-4" style="width: 18rem;">
-        <img src="${mascotas[a].src}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Propietario: ${mascotas[a].propietario}</h5>
-          <p class="card-text">Especie: ${mascotas[a].especie}</p>
-          <p class="card-text">Raza: ${mascotas[a].raza}</p>
-          <p class="card-text">Edad: ${mascotas[a].edad}</p>
-          <p class="card-text">Peso: ${mascotas[a].peso}</p>
-          <p class="card-text">Tipo de consulta: ${mascotas[a].consulta}</p>
-          <a href="#" class="btn btn-primary" onclick="CrearFormulario()">Agregar otra mascota</a>
+            <img src="${mascotas[a].src}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Propietario: ${mascotas[a].propietario}</h5>
+            <p class="card-text">Especie: ${mascotas[a].especie}</p>
+            <p class="card-text">Raza: ${mascotas[a].raza}</p>
+            <p class="card-text">Edad: ${mascotas[a].edad}</p>
+            <p class="card-text">Peso: ${mascotas[a].peso}</p>
+            <p class="card-text">Tipo de consulta: ${mascotas[a].consulta}</p>
+
+            <!-- EL BOTON PARA AGREGAR UNA NUEVA MASCOTA -->
+            <a href="#" class="btn btn-primary" onclick="CrearFormulario()">Agregar otra mascota</a>
           
-          <a href="#" class="btn btn-primary" onclick="modificarM(${a})">Modificar Datos</a>
+
+            <!-- EL BOTON PARA AGREGAR UNA MODIFICAR LOS DATOS DE ESTA MASCOTA -->
+            <a href="#" class="btn btn-primary" onclick="modificarM(${a})">Modificar Datos</a>
                                   <!-- se le pasa el indice del objeto-->
           </div>
       </div>
@@ -216,8 +373,23 @@ const mostrarMascotas = () => {
 
 
 
-// funcion flecha para CREAR  FORMULARIO --------------------------para levantar los datos----------------------------------------------------
+/*
 
+
+███████  ██████  ██████  ███    ███ ██    ██ ██       █████  ██████  ██  ██████      ██   ██ ████████ ███    ███ ██      
+██      ██    ██ ██   ██ ████  ████ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██     ██   ██    ██    ████  ████ ██      
+█████   ██    ██ ██████  ██ ████ ██ ██    ██ ██      ███████ ██████  ██ ██    ██     ███████    ██    ██ ████ ██ ██      
+██      ██    ██ ██   ██ ██  ██  ██ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██     ██   ██    ██    ██  ██  ██ ██      
+██       ██████  ██   ██ ██      ██  ██████  ███████ ██   ██ ██   ██ ██  ██████      ██   ██    ██    ██      ██ ███████ 
+                                                                                                                         
+                                                                                                                         
+
+*/
+
+
+
+
+/* LO ULTIMO -> FUNCION FLECHA para MOSTRAF  FORMULARIO EN HTML ---y---para levantar los datos */
 const CrearFormulario = () => {
   elemento.innerHTML = `
     <form>
@@ -251,6 +423,7 @@ const CrearFormulario = () => {
       <label for="img" class="form-label">Imagen</label>
       <input type="text" class="form-control" id="img">
     </div>
+ 
 
 
 
@@ -264,18 +437,44 @@ const CrearFormulario = () => {
       <label class="form-check-label" for="consulta">Consulta</label>
     </div>
 
+
+
+
     <button type="button" class="btn btn-primary" id="btn">Agregar Datos</button>
+
 
   </form>
     `;
 
 
-
+  //Vamos a agregar una mascota cada vez que se haga click en el boton del formulario
+  //Esto es un evento
   document.getElementById("btn").addEventListener('click', agregarMascota);
-  //Vamos a agregar una mascota cada vez que se haga click en el boton
 
 
 };
+
+
+
+
+/**
+ 
+
+
+
+███████      ██ ███████  ██████ ██    ██  ██████ ██  ██████  ███    ██ 
+██           ██ ██      ██      ██    ██ ██      ██ ██    ██ ████   ██ 
+█████        ██ █████   ██      ██    ██ ██      ██ ██    ██ ██ ██  ██ 
+██      ██   ██ ██      ██      ██    ██ ██      ██ ██    ██ ██  ██ ██ 
+███████  █████  ███████  ██████  ██████   ██████ ██  ██████  ██   ████ 
+                                                                       
+                                                                       
+
+
+ */
+
+
+
 
 /* llamada al metodo "crear formulario", que imprime el formulario */
 CrearFormulario();

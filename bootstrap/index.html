@@ -9,119 +9,158 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Bundle with Popper -->
+    <!--El javascript css -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+    <!--El archivo css -->
     <link rel="stylesheet" href="../css/bootstrap.css">
+
     <title>Bootstrap</title>
 </head>
 
 <body>
-    
+
+    <!-- CONTENEDOR GENERAL DE BOOTSTRAP -->
     <div class="container">
 
+
+        <!-- CONTENEDOR de navegacion -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-verde fixed-top">
+
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-              </div>
+
+                <a class="navbar-brand" href="#">Home</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
+
         </nav>
 
 
 
-        <h1 class="text-center bg-info p-2">Bootstrap</h1>
-       
+        <h1 class="text-center bg-info ">Bootstrap</h1>
+
+        <BR>
+
+        <h2 class="text-center bg-info p-2">Grilla</h2>
+
+        <BR>
 
 
-        <div class="row"> <!--Filas-->
-           
-            
-            <div class="col-12 bg-danger">   <!--Columnas-->
-              
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
+        <!-- CONTENEDOR de grilla ---------------------------------------------------------------------------------------------------------------------------->
+
+
+        <!-- FILA -->
+        <div class="row">
+            <!-- COLUMNA -->
+            <div class="col-3">
+                <p>Col-3 = 1/4 del contenedor</p>
             </div>
-           
-            <div class="col-3 bg-info">     <!--Columnas-->
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
+            <!-- COLUMNA -->
+            <div class="col-3">
+                <p>Col-3 = 1/4 del contenedor</p>
             </div>
-         
-            <div class="col-3">       <!--Columnas-->
-              
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
+            <!-- COLUMNA -->
+            <div class="col-6 ">
+                <p>Col-6 = 1/2 del contenedor, párrafo 1</p>
+                <p>Col-6 = 1/2 del contenedor, párrafo 2</p>
             </div>
-           
-            <div class="col-3">       <!--Columnas-->
-              
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
-            </div>
-         
-            <div class="col-6">     <!--Columnas-->
-               
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
-            </div>
-          
-            <div class="col-6">    <!--Columnas-->
-             
-                <p class="secondary col-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi
-                    sunt autem enim labore ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora
-                    quasi odit, nemo natus!</p>
-                <p class="bg-info col-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt
-                    autem enim labore ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi
-                    odit, nemo natus!</p>
-            </div>
-           
-            <div class="col-6">  <!--Columnas-->
-               
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt autem enim labore
-                    ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi odit, nemo natus!
-                </p>
-            </div>
-          
-            <div class="col-6 d-flex justify-content-center"> <!--Columnas-->
-                
-                <p class="secondary col-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi
-                    sunt autem enim labore ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora
-                    quasi odit, nemo natus!</p>
-                <p class="bg-info col-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio modi sunt
-                    autem enim labore ipsum harum beatae optio. Dolores cum eveniet vitae illum ipsum aut tempora quasi
-                    odit, nemo natus!</p>
+            <!-- COLUMNA -->
+            <div class="col-12 d-flex justify-content-center">
+                <p>Col-12 = 1/1 del contenedor, párrafo 1</p>
+                <p>Col-12 = 1/1 del contenedor, párrafo 2  agrupado horizontalmente</p>
             </div>
         </div>
 
-        <!-- iNICIO CARDS-->
 
-        <div class="row"> <!--Fila-->
+        <BR>
+        <h3 class="text-center">Ejemplo</h3>
+        <BR>
 
-            <div class="card col-3 border border-primary"> <!--Columnas-->
+
+
+        <!-- FILA -->
+        <div class="row">
+
+            <!-- COLUMNA -->
+            <div class="col-12 bg-danger">
+                <p>Col-12 = ancho completo </p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-3 bg-info">
+
+                <p>Col-3 = 1/4 del contenedor</p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-3">
+
+                <p>Col-3 = 1/4 del contenedor</p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-3">
+
+                <p>Col-3 = 1/4 del contenedor</p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-6">
+
+                <p>Col-6 = 1/2 del contenedor</p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-6">
+                <!-- elementos encolumnados -->
+                <p class="secondary col-6">Col-6 = 1/2 del contenedor párrafo 1</p>
+                <p class="bg-info col-6">Col-6 = 1/2 del contenedor párrafo 2</p>
+            </div>
+            <!-- COLUMNA -->
+            <div class="col-6">
+
+                <p>Col-6 = 1/2 del contenedor </p>
+            </div>
+
+            <!-- COLUMNA -->
+            <div class="col-6 d-flex justify-content-center">
+
+                <p class="secondary col-6">Col-6 = 1/2 del contenedor, párrafo 1 agrupado horizontalmente</p>
+                <p class="bg-info col-6">Col-6 = 1/2 del contenedor párrafo 2 agrupado horizontalmente</p>
+            </div>
+        </div>
+
+
+        <BR>
+        <h2 class="text-center bg-info p-2">Cards</h2>
+        <BR>
+
+
+        <!-- CONTENEDOR de cards ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="row">
+            <!--FILA -->
+
+            <div class="card col-3 border border-primary">
+                <!--COLUMNA-->
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -132,7 +171,20 @@
             </div>
 
 
-            <div class="card col-3">                <!--Columnas-->
+            <div class="card col-3">
+                <!--COLUMNA-->
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ">Go somewhere</a>
+                </div>
+            </div>
+
+
+            <div class="card col-3">
+                <!--COLUMNA-->
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -143,18 +195,8 @@
             </div>
 
 
-            <div class="card col-3">            <!--Columnas-->
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-
-            <div class="card col-3">            <!--Columnas-->
+            <div class="card col-3">
+                <!--COLUMNA-->
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -164,11 +206,56 @@
                 </div>
             </div>
         </div>
+
+
+        <BR>
+            <h3 class="text-center">Ejemplo</h3>
+            <BR>
+    
+    
+        <!-- CONTENEDOR de cards ----------------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <!--FILA-->
+    
+                <div class="card col-3 border border-primary">
+                    <!--COLUMNA-->
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+    
+    
+                <div class="card col-3">
+                    <!--COLUMNA-->
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-danger">Go somewhere</a>
+                    </div>
+                </div>
+    
+    
+                <div class="card col-6">
+                    <!--COLUMNA-->
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
     </div>
-        <!-- FIN CARDS-->
 
     <a href="#" class="btn bg-danger">Botón</a>
-    
+
     <footer class="col-12 text-center bg-verde p-2 fixed-bottom">
         Creado por mi
     </footer>

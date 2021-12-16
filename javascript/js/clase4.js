@@ -1,17 +1,72 @@
+/*
 
-let elemento = document.getElementById("principal");/*Tomamos control del div a partir de su ID */
+
+██╗███╗   ██╗████████╗███████╗██████╗  █████╗  ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗                                              
+██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝██║██╔═══██╗████╗  ██║                                              
+██║██╔██╗ ██║   ██║   █████╗  ██████╔╝███████║██║     ██║     ██║██║   ██║██╔██╗ ██║                                              
+██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██╔══██║██║     ██║     ██║██║   ██║██║╚██╗██║                                              
+██║██║ ╚████║   ██║   ███████╗██║  ██║██║  ██║╚██████╗╚██████╗██║╚██████╔╝██║ ╚████║                                              
+╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝          
+
+                                                                                                                                  
+██╗  ██╗████████╗███╗   ███╗██╗         ██╗   ██╗         ██╗ █████╗ ██╗   ██╗ █████╗ ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
+██║  ██║╚══██╔══╝████╗ ████║██║         ╚██╗ ██╔╝         ██║██╔══██╗██║   ██║██╔══██╗██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
+███████║   ██║   ██╔████╔██║██║          ╚████╔╝          ██║███████║██║   ██║███████║███████╗██║     ██████╔╝██║██████╔╝   ██║   
+██╔══██║   ██║   ██║╚██╔╝██║██║           ╚██╔╝      ██   ██║██╔══██║╚██╗ ██╔╝██╔══██║╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   
+██║  ██║   ██║   ██║ ╚═╝ ██║███████╗       ██║       ╚█████╔╝██║  ██║ ╚████╔╝ ██║  ██║███████║╚██████╗██║  ██║██║██║        ██║   
+╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝╚══════╝       ╚═╝        ╚════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   
+                                                                                                                                  
+
+*/
 
 
+
+/*identifico el elemento que voy a usar: <div id="principal"> */
+let elemento = document.getElementById("principal");
+
+
+
+/*identifico el elemento que voy a usar */
 let btn=document.getElementById("btn"); /*Tomamos control del boton */
 document.addEventListener('click',ejemplo) /*Agregamos funcion al click*/
 
 
-function ejemplo(){ /*y asi es la funcion*/
+
+
+function ejemplo(){ /*y asi es la funcion mas simple de JS*/
     alert('Estamos llamando a la funcion cuando haces click')
   };
 
 
+/*
+
+
+
+███████╗ ██████╗ ██████╗ ███╗   ███╗██╗   ██╗██╗      █████╗ ██████╗ ██╗ ██████╗                          
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║██║   ██║██║     ██╔══██╗██╔══██╗██║██╔═══██╗                         
+█████╗  ██║   ██║██████╔╝██╔████╔██║██║   ██║██║     ███████║██████╔╝██║██║   ██║                         
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██║   ██║██║     ██╔══██║██╔══██╗██║██║   ██║                         
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║██║  ██║██║╚██████╔╝                         
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝      
+
+
+██╗███╗   ██╗██╗ ██████╗██╗ ██████╗     ██████╗ ███████╗    ███████╗███████╗███████╗██╗ ██████╗ ███╗   ██╗
+██║████╗  ██║██║██╔════╝██║██╔═══██╗    ██╔══██╗██╔════╝    ██╔════╝██╔════╝██╔════╝██║██╔═══██╗████╗  ██║
+██║██╔██╗ ██║██║██║     ██║██║   ██║    ██║  ██║█████╗      ███████╗█████╗  ███████╗██║██║   ██║██╔██╗ ██║
+██║██║╚██╗██║██║██║     ██║██║   ██║    ██║  ██║██╔══╝      ╚════██║██╔══╝  ╚════██║██║██║   ██║██║╚██╗██║
+██║██║ ╚████║██║╚██████╗██║╚██████╔╝    ██████╔╝███████╗    ███████║███████╗███████║██║╚██████╔╝██║ ╚████║
+╚═╝╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝ ╚═════╝     ╚═════╝ ╚══════╝    ╚══════╝╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+   
+
+*/
+
+
+/*Vamos a subir un formulario de inicio de sesion en diseñado HTML, subido con Javascript */
+
+
 /*Usamos el evento load renderizamos el formulario */
+
+/* tomamos el control de la ventana que va a manejar el inicio de sesion. un formulario html.*/
 window.addEventListener('load',function(){ /*Agregamos funcion al cargar*/
     elemento.innerHTML=`
     <form action="#">
@@ -28,14 +83,31 @@ window.addEventListener('load',function(){ /*Agregamos funcion al cargar*/
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+
+
+    <!-- BOTON CON EVENTO-->
+
     <button type="button" id="btn" class="btn btn-primary" onclick="entrar()">Entrar</button>
+
+
+
   </form>
     `;
 });
 
-/*array */
+
+/*ejemplo de ARRAY */
 let usuarios=["Luis","Fede",40];
-/*objeto */
+
+
+
+/*vamos a usar un objeto para chequear la información que nos ingrese */
+
+
+
+/*ejemplo de OBJETO */
+/*Este objeto se llama "usuario" y sus propieades son datos personales. 
+Tiene un metodo que compara los datos propios con otros para determinar si son los mismos o no.*/
 let usuario = {
    /*tiene propiedades */
     name:"Luis Navas",
@@ -50,14 +122,24 @@ let usuario = {
         }
     }    
 };
-/* funcion  que se ejecuta al tocar el boton del formulario */
+
+
+
+/* funcion que se ejecuta al tocar el boton del formulario */
+
+
+
+
 function entrar(){
     //e.preventDefault();
 
-    let email = document.getElementById("exampleInputEmail1").value; /* capturar la info ingresada*/
-    let pass = document.getElementById("exampleInputPassword1").value; /* capturar la info ingresada*/
+    let email = document.getElementById("exampleInputEmail1").value; /* .value capturar la info ingresada*/
+    let pass = document.getElementById("exampleInputPassword1").value; /* .value capturar la info ingresada*/
     
-    let entra = usuario.validar(email,pass); /* el contenido de esta variable es boolean, resultado del metodo de verificar*/
+
+    /*EJEMPLO de cómo se usa el método de un objeto*/
+
+    let entra = usuario.validar(email,pass); /* se inicializa una variable que va a almacernar la respuesta booleana: si corresponde el dato ingresado con el almacenado*/
     if(entra){
         elemento.innerHTML=`
             <h1>Administración</h1>

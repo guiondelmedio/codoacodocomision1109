@@ -1,12 +1,22 @@
-#justify{
+#contenedorFlexbox{
     display: flex; /* uno al lado del otro, horizontal */
     /* justify-content: center;se puede ordenar de varias maneras*/
     /* justify-content: flex-end;       para posicionar al final*/
     /* justify-content: flex-start;     para posicionar al principio */
     /* justify-content:space-around;    espaciado */
     /* justify-content:space-between;   espaciado solo entre elementos*/
-    /* justify-content:space-evenly;    espaciado uniforme*/
+     justify-content:space-evenly;  /*  espaciado uniforme*/
+    margin-bottom:300px;
+}
 
+.otroContenedorFlexbox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:200px;
+}
+.listas{
+    margin-bottom:200px;
+    width: 100%;
 }
 .usandoFloat{
 /*  width: 150px;
@@ -15,33 +25,42 @@
     border-color: rgb(49, 46, 0);
     border-width: 2px;
     border-style: solid;
-    float: left;
+    float: right;
+    text-align: justify;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
 } 
+
+
 .usandoFlexbox{
-    width: 150px;
-    height: 150px;
     background-color: blueviolet;
     border-color: burlywood;
     border-width: 2px;
     border-style: solid;
+    text-align: justify;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    font-size:11px;
+    color:white;
 } 
+
 .usandoFlexbox:after{
-    content:'Esto aparece después del contenido. Ejemplo de :after';
-    color:rgb(15, 0, 99);
+    content:'Ejemplo de :after';
+    color:rgb(255, 0, 0);
     font-size:10px;
 }
+
 .usandoFlexbox:before{
-    content:'Esto aparece antes del contenido.Ejemplo de :before';
+    content:'Ejemplo de :before';
     color:rgb(255, 242, 4);
     font-size:10px;
 }
+
 .usandoFlexbox:first-letter{
-    content:'Esto aparece antes del contenido.Ejemplo de :before';
+    content:' Ejemplo de :before';
     color:rgb(0, 255, 0);
-    font-size:19px;
+    font-size:25px;
     font-weight: bold;
-}
-.principal{
-    display: flex;
-    flex-direction: column;
 }
