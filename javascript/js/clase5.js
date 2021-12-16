@@ -27,8 +27,12 @@ let mascotas = []; /* defino un array vacio */
 // mascotas[0]= "Loro"; 
 // mascotas[1] = "Perro";
 
+
+
 //LA FUNCION PUSH -> agrega un elemento al final del array, por si no sabes qué cantidad hay.
 //mascotas.push("Gallo");
+
+
 
 
 //comillas francesas AltGr + }    `
@@ -59,21 +63,19 @@ let mascotas = []; /* defino un array vacio */
 
 
 
-
-
-
-
-
-
 //¿Cómo imprimir un array JS dentro de un documento HTML?
 //elemento.innerHTML = `<p>${mascotas}</p>`;
 //elemento.innerHTML = `<p>${mascotas[1]}</p>`;
+
+
 
 //¿Qué longitud tiene el array y como imprimirlo?
 //elemento.innerHTML = `<p> Hay ${mascotas.length} mascotas </p>`;
 
 
 //¿Cómo recorrer el array, imprimiendo la información de cada posición?
+
+
 /*
 for (let a = 0; a < mascotas.length; a++) {
   elemento.innerHTML += `<p>la mascota nro ` + a + ` es ${mascotas[a]}</p>`;
@@ -82,9 +84,17 @@ for (let a = 0; a < mascotas.length; a++) {
 */
 
 
+/*
 
 
-
+                                                            
+                                                            
+█████ █████ █████ █████ █████ █████ █████ █████ █████ █████ 
+                                                            
+                                                            
+                                                            
+                                                            
+*/
 
 /*
 
@@ -387,6 +397,24 @@ const mostrarMascotas = () => {
         `;
   }
 };
+
+
+
+/**
+ 
+                                                            
+                                                            
+█████ █████ █████ █████ █████ █████ █████ █████ █████ █████ 
+                                                            
+                                                            
+                                                            
+                                                            
+
+ */
+
+
+
+
 
 
 
