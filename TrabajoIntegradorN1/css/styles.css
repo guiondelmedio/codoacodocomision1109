@@ -1,41 +1,22 @@
-
-.cyan{
-    color:white;
-    background-color:rgb(52, 175, 175);
-}
-
-.grisOscuro{
-    background-color: #353A40;
-}
-
-img{
-    width: 100%;
-}
-.nav-link {
-    color:grey;
-}
-.nav-pills .nav-link.active{
-    background-color: #353A40;
-}
-
-#logoTexto{
- 
-}
-#ticketVerde{
-    color:green;
-}
-#colorBoton{
-    background-color: #96C93E;
-    border-color:#96C93E;
-}
-#colorFooter{
-    background-color:#1D3947;
-}
-.container-fluid{
-    padding-right:0px;
-    padding-left:0px;
-}
-
-#imagenHonolulu{
-    padding-right:0px;
-}
+.background {
+    background-image: url("../img/hawaii.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+  }
+  
+  .card-group {
+    /* margin: 0rem 15rem; */
+  }
+  
+  .card {
+    margin: 1rem;
+  }
+  #footer{
+    /* position: fixed;
+    bottom: 0px; */
+   
+  }
