@@ -1,4 +1,41 @@
 
+
+
+
+
+
+/* se define la variable elemento contiene al contenedor del documento cuyo ID sea "principal" */
+let elemento = document.querySelector("#principal");
+
+
+
+
+/*
+uso de...
+ █████  ██████  ██████   █████  ██    ██ 
+██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
+███████ ██████  ██████  ███████   ████   
+██   ██ ██   ██ ██   ██ ██   ██    ██    
+██   ██ ██   ██ ██   ██ ██   ██    ██                                     
+                                        
+*/
+
+let mascotas = []; /* defino un array vacio */
+
+
+/*asignando valores posiciones/índices*/
+// mascotas[0]= "Loro"; 
+// mascotas[1] = "Perro";
+
+//LA FUNCION PUSH -> agrega un elemento al final del array, por si no sabes qué cantidad hay.
+//mascotas.push("Gallo");
+
+
+//comillas francesas AltGr + }    `
+
+
+
+
 /*
 
 
@@ -24,27 +61,8 @@
 
 
 
-/* se define la variable elemento contiene al contenedor del documento cuyo ID sea "principal" */
-let elemento = document.querySelector("#principal");
 
 
-
-
-
-
-/**EJEMPLO DE USO DE ARRAYS --------*/
-let mascotas = []; /* defino un array vacio */
-
-
-/*asignando valores posiciones/índices*/
-// mascotas[0]= "Loro"; 
-// mascotas[1] = "Perro";
-
-//LA FUNCION PUSH -> agrega un elemento al final del array, por si no sabes qué cantidad hay.
-//mascotas.push("Gallo");
-
-
-//comillas francesas AltGr+} = `
 
 
 //¿Cómo imprimir un array JS dentro de un documento HTML?
