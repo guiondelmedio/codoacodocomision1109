@@ -34,7 +34,7 @@ document.addEventListener('click',ejemplo) /*Agregamos funcion al click*/
 
 
 function ejemplo(){ /*y asi es la funcion mas simple de JS*/
-    alert('Estamos llamando a la funcion cuando haces click')
+    alert('Imprimo un texto cuando  haces click')
   };
 
 
@@ -69,23 +69,42 @@ function ejemplo(){ /*y asi es la funcion mas simple de JS*/
 /* tomamos el control de la ventana que va a manejar el inicio de sesion. un formulario html.*/
 window.addEventListener('load',function(){ /*Agregamos funcion al cargar*/
     elemento.innerHTML=`
+   
     <form action="#">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
+
+       <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+       </div>
+
+       <div class="mb-3">
+           <label for="exampleInputPassword1" class="form-label">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1">
+       </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+             <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+
+
 
 
     <!-- BOTON CON EVENTO-->
+
+<!--
+
+██████   ██████  ████████  ██████  ███    ██      ██████  ██████  ███    ██     ███████ ██    ██ ███████ ███    ██ ████████  ██████  
+██   ██ ██    ██    ██    ██    ██ ████   ██     ██      ██    ██ ████   ██     ██      ██    ██ ██      ████   ██    ██    ██    ██ 
+██████  ██    ██    ██    ██    ██ ██ ██  ██     ██      ██    ██ ██ ██  ██     █████   ██    ██ █████   ██ ██  ██    ██    ██    ██ 
+██   ██ ██    ██    ██    ██    ██ ██  ██ ██     ██      ██    ██ ██  ██ ██     ██       ██  ██  ██      ██  ██ ██    ██    ██    ██ 
+██████   ██████     ██     ██████  ██   ████      ██████  ██████  ██   ████     ███████   ████   ███████ ██   ████    ██     ██████  
+                                                                                                                                     
+                                                                                                                                     
+
+-->
 
     <button type="button" id="btn" class="btn btn-primary" onclick="entrar()">Entrar</button>
 
@@ -96,6 +115,20 @@ window.addEventListener('load',function(){ /*Agregamos funcion al cargar*/
 });
 
 
+
+
+/*
+solo un ejemplo de 
+ █████  ██████  ██████   █████  ██    ██ 
+██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
+███████ ██████  ██████  ███████   ████   
+██   ██ ██   ██ ██   ██ ██   ██    ██    
+██   ██ ██   ██ ██   ██ ██   ██    ██    
+                                         
+                                         
+
+*/
+
 /*ejemplo de ARRAY */
 let usuarios=["Luis","Fede",40];
 
@@ -104,6 +137,17 @@ let usuarios=["Luis","Fede",40];
 /*vamos a usar un objeto para chequear la información que nos ingrese */
 
 
+/*
+ejemplo de uso de 
+ ██████  ██████       ██ ███████ ████████  ██████  
+██    ██ ██   ██      ██ ██         ██    ██    ██ 
+██    ██ ██████       ██ █████      ██    ██    ██ 
+██    ██ ██   ██ ██   ██ ██         ██    ██    ██ 
+ ██████  ██████   █████  ███████    ██     ██████  
+en el formulario de inicio de sesion
+
+ */                                                  
+                                                  
 
 /*ejemplo de OBJETO */
 /*Este objeto se llama "usuario" y sus propieades son datos personales. 
@@ -113,7 +157,7 @@ let usuario = {
     name:"Luis Navas",
     email:'luis.navas@bue.edu.ar',
     pass:'123456',
-    /*tiene metodos */
+    /*tiene un metodo que ayuda a validar el usuario y la contraseña*/
     validar:(e,p)=>{
         if(e === usuario.email && p === usuario.pass){
             return true;
@@ -125,9 +169,19 @@ let usuario = {
 
 
 
-/* funcion que se ejecuta al tocar el boton del formulario */
 
 
+/* funcion /evento que se ejecuta al tocar el boton del formulario 
+
+███████ ██          ███████ ██    ██ ███████ ███    ██ ████████  ██████  
+██      ██          ██      ██    ██ ██      ████   ██    ██    ██    ██ 
+█████   ██          █████   ██    ██ █████   ██ ██  ██    ██    ██    ██ 
+██      ██          ██       ██  ██  ██      ██  ██ ██    ██    ██    ██ 
+███████ ███████     ███████   ████   ███████ ██   ████    ██     ██████  
+                                                                         
+                                                                         
+
+*/
 
 
 function entrar(){
