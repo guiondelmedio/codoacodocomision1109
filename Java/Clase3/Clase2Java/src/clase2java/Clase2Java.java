@@ -20,8 +20,8 @@ public class Clase2Java {
         ing.setUsuario(nombre);
         ing.setPass(pass);
         
-         System.out.println(ing.Validar());
-        
+        System.out.println(ing.Validar());
+         
         
 
         
