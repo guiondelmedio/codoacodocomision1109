@@ -29,7 +29,7 @@
         <!-- agregar el id oculto -->
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <form class="p-5 w-50" action="AlumnosControler?accion=actualizar"
+                <form class="p-5 w-50" action="AlumnosController?accion=actualizar"
                       method="POST">
                     
                     

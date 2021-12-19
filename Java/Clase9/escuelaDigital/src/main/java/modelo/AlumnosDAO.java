@@ -4,28 +4,25 @@ import config.Conexion;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
 public class AlumnosDAO {
     Connection conexion;
-    public AlumnosDAO() throws SQLException {
+    public AlumnosDAO(){
         Conexion con = new Conexion();
-        conexion = con.getConection();
+        try {
+            conexion = con.getConection();
+        } catch (SQLException ex) {
+            Logger.getLogger(AlumnosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
-    
-    
-    
     public List<Alumnos> listarAlumnos(){
-        
         PreparedStatement ps;
         ResultSet rs;
-      
         List<Alumnos> lista = new ArrayList<>();
-    
-        
-        
         /*List clase abstracta*/
         try{
             ps = conexion.prepareStatement("SELECT * FROM participantes");
@@ -37,30 +34,22 @@ public class AlumnosDAO {
                 String apellidos = rs.getString("apellidos");
                 String email = rs.getString("email");
                 String telefono = rs.getString("telefono"); 
-                
                 Alumnos alumnos = new Alumnos(id,nombres,apellidos,
                         email, telefono);
                 lista.add(alumnos);
             }
-            return lista;
             
+            return lista;
         }catch(SQLException e){
             System.out.println(e.toString());
             return null;
         }
-        
     }
-    
-    
-    
     
     public Alumnos mostrarAlumno(int _id){
         PreparedStatement ps;
         ResultSet rs;
-        
-        
         Alumnos alumno = null;
-        
         
         try{
             ps = conexion.prepareStatement("SELECT id, nombres,apellidos,"
@@ -85,12 +74,8 @@ public class AlumnosDAO {
             return null;
         }
     }
-    
-    
     public boolean insertarAlumno(Alumnos alumno){
-        
         PreparedStatement ps;
-        
         try{
           ps = conexion.prepareStatement("INSERT INTO participantes(nombres,apellidos,email, telefono)VALUES(?,?,?,?)");
           ps.setString(1,alumno.getNombres());
@@ -105,13 +90,8 @@ public class AlumnosDAO {
         }
     }
     
-    
-    
-    
     public boolean actualizarAlumno(Alumnos alumno){
-        
         PreparedStatement ps;
-        
          try{
           ps = conexion.prepareStatement(
   "UPDATE participantes SET nombres=?, apellidos=?, email=?,telefono=? WHERE id=?");
@@ -127,13 +107,8 @@ public class AlumnosDAO {
             return false;
         }
     }
-    
-    
-    
     public boolean eliminarAlumno(int _id){
-        
         PreparedStatement ps;
-        
         try{
           ps = conexion.prepareStatement("DELETE FROM participantes WHERE id=?");
           ps.setInt(1, _id);
@@ -144,15 +119,9 @@ public class AlumnosDAO {
             return false;
         }
     }
-    
-    
-    
-    
     public boolean ingresarUsuario(String usuario, String clave){
-        
         PreparedStatement ps;
         ResultSet rs;
-        
         try{
             ps = conexion.prepareStatement("SELECT * FROM usuarios WHERE email=?");
             ps.setString(1, usuario);
