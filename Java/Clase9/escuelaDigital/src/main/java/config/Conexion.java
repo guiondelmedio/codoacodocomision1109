@@ -19,6 +19,9 @@ public class Conexion {
         }
         return conexion;
     } 
+    
+    
+    /*
     public static void main(String [] argms) throws SQLException{
         Conexion con = new Conexion();
         
@@ -42,4 +45,5 @@ public class Conexion {
         }
         
     }
+*/
 }
