@@ -4,10 +4,15 @@
     Author     : Buen día
 --%>
 
+
+
 <%@page import="modelo.AlumnosDAO"%>
 <%@page import="modelo.Alumnos"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,6 +39,8 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
+                        
                         <%
                             List<Alumnos> resultado  = null;
                             AlumnosDAO alumno =new AlumnosDAO();
@@ -54,6 +61,8 @@
                              <%   
                             }
                         %>
+                        
+                        
                     </tbody>
                 </table>
             </div>
