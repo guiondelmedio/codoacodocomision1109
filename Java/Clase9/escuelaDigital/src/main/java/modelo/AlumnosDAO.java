@@ -1,11 +1,10 @@
+/*al dia*/
 package modelo;
 
 import config.Conexion;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 
@@ -13,11 +12,7 @@ public class AlumnosDAO {
     Connection conexion;
     public AlumnosDAO(){
         Conexion con = new Conexion();
-        try {
-            conexion = con.getConection();
-        } catch (SQLException ex) {
-            Logger.getLogger(AlumnosDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        conexion = con.getConection();
     }
     public List<Alumnos> listarAlumnos(){
         PreparedStatement ps;

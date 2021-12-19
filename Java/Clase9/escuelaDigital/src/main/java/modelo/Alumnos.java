@@ -1,14 +1,12 @@
+/*al dia*/
 package modelo;
 
-
-public class Alumnos{
+public class Alumnos {
     private int id;
     private String nombres;
     private String apellidos;
     private String email;
     private String telefono;
-    
-    
     
     public int getId() {
         return id;
@@ -49,16 +47,14 @@ public class Alumnos{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-
     
     
-    
-    public Alumnos(int id, String nombres, String apellidos, String email, String telefono){
+    public Alumnos(int id, String n, String apellidos,
+            String email,String telefono){
         this.id=id;
-        this.nombres=nombres;
+        this.nombres=n;
         this.apellidos=apellidos;
+        this.email=email;
         this.telefono=telefono;
-        
     }
 }

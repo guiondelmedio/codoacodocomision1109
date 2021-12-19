@@ -1,17 +1,9 @@
-<%-- 
-    Document   : alumnos
-    Created on : 19 dic. 2021, 00:39:57
-    Author     : Buen día
---%>
-
-
+<!--al dia -->
 
 <%@page import="modelo.AlumnosDAO"%>
 <%@page import="modelo.Alumnos"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -39,8 +31,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
-                        
                         <%
                             List<Alumnos> resultado  = null;
                             AlumnosDAO alumno =new AlumnosDAO();
@@ -61,8 +51,6 @@
                              <%   
                             }
                         %>
-                        
-                        
                     </tbody>
                 </table>
             </div>
