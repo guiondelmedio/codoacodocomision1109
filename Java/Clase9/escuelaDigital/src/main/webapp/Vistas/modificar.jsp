@@ -14,6 +14,7 @@
         <title>Modificar registro</title>
     </head>
     <body>
+        
         <%
             String id = request.getParameter("id");
             int mid;
@@ -22,6 +23,8 @@
             AlumnosDAO alumnosDao = new AlumnosDAO();
             resultado = alumnosDao.mostrarAlumno(mid);
         %>
+        
+        
      <h1 class="text-center">Modificar Registro</h1>
         <!-- agregar el id oculto -->
         <div class="container">
