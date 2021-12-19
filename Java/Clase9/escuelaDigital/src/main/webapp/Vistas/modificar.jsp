@@ -29,13 +29,17 @@
         <!-- agregar el id oculto -->
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <form class="p-5 w-50" action="AlumnosController?accion=actualizar"
+                <form class="p-5 w-50" action="AlumnosControler?accion=actualizar"
                       method="POST">
+                    
+                    
                     <div class="mb-3">
                         <label for="id" class="form-label"></label>
                         <input type="hidden" class="form-control" id="id"
                                name="id" value="<%=resultado.getId()%>"/>
                     </div>
+                    
+                    
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre"
