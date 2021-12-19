@@ -1,29 +1,66 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package config;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Buen día
  */
 public class ConfiguracionBaseDeDatos {
-    public String driver="com.mysql.jdbc.Driver";
-    public Connection getConection(){
+    public String driver="com.mysql.cj.jdbc.Driver";/*
+    public Connection getConection()throws SQLException{
         Connection conexion=null;
         try{
-            conexion = DriverManager.getConnection ("jdbc:mysql//localhost:3306/comision1109");
+            try {
+                Class.forName(driver);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ConfiguracionBaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            conexion = DriverManager.getConnection ("jdbc:mysql//localhost:3306/comision1109","usuario-java","123456");
         }
         catch(SQLException e){
             System.out.println(e.toString());
         }
         return conexion;
-    }
-    public static void main(String[] args) {
-        System.out.println("Hola");
+    }*/
+        public Connection getConection()throws SQLException{
+        Connection conexion=null;
+        try{
+            Class.forName(driver);
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision1109",
+                    "usuario-java","123456");
+        }catch(SQLException e){
+            System.out.println(e.toString());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ConfiguracionBaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return conexion;
+    } 
+        
+    public static void main(String[] args) throws SQLException {
+        ConfiguracionBaseDeDatos con = new ConfiguracionBaseDeDatos();
+        
+        Connection conexion=null;
+        conexion = con.getConection();
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        
+        ps = conexion.prepareStatement("SELECT * FROM participantes");
+        rs=ps.executeQuery();
+       
+        while(rs.next()){
+            int id = rs.getInt("id");
+            String nombres = rs.getString("nombres");
+             String apellidos = rs.getString("apellidos");
+             String email = rs.getString("email");
+             String telefono = rs.getString("telefono");
+            System.out.println("id: "+ id +" Nombres: "+ nombres +" Apellidos: "
+                    +apellidos+ "Email: "+ email + " Telefono: "+telefono);
+        }
+        
+        }
     }
     
-}
